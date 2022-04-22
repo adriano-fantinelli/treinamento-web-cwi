@@ -6,7 +6,7 @@
  npm i
  ```
  
- ## Executando dependências: 
+ ## Executando testes: 
  
  ```
  npm run cy:open

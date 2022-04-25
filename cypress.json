@@ -1,3 +1,8 @@
 {
-    "baseUrl": "http://automationpractice.com"
+    "baseUrl": "http://automationpractice.com",
+    "env": {
+        "allureAttachRequests": true,
+        "allureAddAnalyticLabels": true,
+        "allureAddVideoOnPass": true
+    }
 }

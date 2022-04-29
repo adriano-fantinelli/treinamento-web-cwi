@@ -1,8 +1,8 @@
 const el = require('./elements').ELEMENTS;
 
 class MyAccount {
-     validarLoginRealizadoComSucesso(){
-        cy.get(el.account).should('have.text', 'Treinamento CWI');
+     validarLoginRealizadoComSucesso(textoMyAccount){
+        cy.get(el.account).should('have.text', textoMyAccount);
      }
 }
 

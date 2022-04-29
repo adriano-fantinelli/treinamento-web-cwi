@@ -6,9 +6,11 @@ import {
     loginPage,
     myAccountPage
 } from '../support/pages'
+import categoriesFixture  from '../fixtures/categories.json'
+import loginFixture from '../fixtures/login.json'
 
 describe('Fluxos do ecommerce', () => {
-    categoryPage.CATEGORIES.forEach(category => {
+    categoriesFixture.categories.forEach(category => {
         it(`acessar categoria ${category}`, () => {
             homePage.acessarCategoria(category);
             categoryPage.validarAcessoACategoria(category)
@@ -17,8 +19,8 @@ describe('Fluxos do ecommerce', () => {
 
     it('realizar login', () => {
         homePage.acessarLogin();
-        loginPage.preencherLogin();
-        myAccountPage.validarLoginRealizadoComSucesso()
+        loginPage.preencherLogin(loginFixture.dadosUsuario.email, loginFixture.dadosUsuario.senha);
+        myAccountPage.validarLoginRealizadoComSucesso(loginFixture.dadosUsuario.nome)
     });
 
 });

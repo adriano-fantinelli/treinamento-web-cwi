@@ -2,5 +2,6 @@ export const ELEMENTS = {
     email: '#email',
     password: '#passwd',
     forgot: '.lost_password > a',
-    sign_in: '#SubmitLogin'
+    sign_in: '#SubmitLogin',
+    mensagemErro: 'ol > li'
 }

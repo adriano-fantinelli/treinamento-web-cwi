@@ -3,5 +3,13 @@
         "email": "treinamentocwiweb@mail.com",
         "senha": "treinamento",
         "nome": "Treinamento CWI"
+    },
+    "dadosInvalidos":{
+        "emailSemMascara": "treinamentocwiweb",
+        "emBranco": ""
+    },
+    "mensagemErro": {
+        "emailInvalido": "Invalid email address.",
+        "emailObrigatorio": "An email address required."
     }
 }

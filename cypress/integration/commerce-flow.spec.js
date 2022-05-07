@@ -23,4 +23,22 @@ describe('Fluxos do ecommerce', () => {
         myAccountPage.validarLoginRealizadoComSucesso(loginFixture.dadosUsuario.nome)
     });
 
+    it('e-mail fora da máscara', () => {
+        homePage.acessarLogin();
+        loginPage.preencherLogin(loginFixture.dadosInvalidos.emailSemMascara, loginFixture.dadosUsuario.senha);
+        loginPage.validarMensagemErro(loginFixture.mensagemErro.emailInvalido)
+    });
+
+    it('e-mail em branco', () => {
+        homePage.acessarLogin();
+        loginPage.preencherPassword(loginFixture.dadosUsuario.senha)
+        loginPage.clicarSignIn()
+        loginPage.validarMensagemErro(loginFixture.mensagemErro.emailObrigatorio)
+    });
+
+    it('e-mail e senha em branco', () => {
+        homePage.acessarLogin();
+        loginPage.clicarSignIn()
+        loginPage.validarMensagemErro(loginFixture.mensagemErro.emailObrigatorio)
+    });
 });

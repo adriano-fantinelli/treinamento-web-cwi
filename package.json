@@ -10,8 +10,8 @@
     "allure:report": "allure generate allure-results --clean",
     "allure:serve": "allure serve allure-results",
     "allure:open": "allure open allure-report",
-    "cy:run-allure-report": "npm-run-all cy:run-allure allure:report",
-    "cy:run-allure-open": "npm-run-all cy:run-allure allure:report allure:open"
+    "cy:run-allure-report": "npm-run-all -s -c cy:run-allure allure:report",
+    "cy:run-allure-open": "npm-run-all -s -c cy:run-allure allure:report allure:open"
   },
   "keywords": [],
   "author": "",
